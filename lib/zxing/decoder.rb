@@ -9,6 +9,7 @@ module ZXing
     require 'zxing/core-3.1.1-SNAPSHOT.jar'
     require 'zxing/javase-3.1.1-SNAPSHOT.jar'
 
+    java_import com.google.zxing.PDF417Reader
     java_import com.google.zxing.MultiFormatReader
     java_import com.google.zxing.BinaryBitmap
     java_import com.google.zxing.Binarizer
@@ -52,7 +53,7 @@ module ZXing
       end
 
       def reader
-        MultiFormatReader.new
+        PDF417Reader.new
       end
 
       def decode
